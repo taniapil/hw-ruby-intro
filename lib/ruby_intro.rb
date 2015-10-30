@@ -27,7 +27,6 @@ def sum_to_n? arr, n
   return false if arr.empty? or arr.length == 1
   for i in 0...arr.length - 1
     for j in i + 1...arr.length
-      puts "i: #{i}, j: #{j}, i+j: #{arr[i]+arr[j]}"
       if arr[i] + arr[j] == n
         return true
       end
