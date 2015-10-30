@@ -10,8 +10,14 @@ def sum arr
   arr.inject(0, :+)
 end
 
+# Define a method max_2_sum(array) which takes an array of integers as an argument
+# and returns the sum of its two largest elements. For an empty array it should 
+# return zero. For an array with just one element, it should return that element.
 def max_2_sum arr
-  # YOUR CODE HERE
+  return 0 if arr.empty?
+  return arr[0] if arr.length == 1
+  sorted = arr.sort.reverse
+  sorted[0] + sorted[1]
 end
 
 def sum_to_n? arr, n
