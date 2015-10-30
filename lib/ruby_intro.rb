@@ -78,6 +78,9 @@ class BookInStock
     @price = price
   end
   
+  # Include a method price_as_string that returns the price of the book formatted
+  # with a leading dollar sign and two decimal places, that is, a price of 20 
+  # should format as "$20.00" and a price of 33.8 should format as "$33.80".
   def price_as_string
     return sprintf('$%.2f', @price)
   end
