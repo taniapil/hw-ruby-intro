@@ -2,8 +2,10 @@
 
 # Part 1
 
+# Define a method sum(array) that takes an array of integers as an argument and
+# returns the sum of its elements. For an empty array it should return zero.
 def sum arr
-  # YOUR CODE HERE
+  return 0 if arr.empty?
 end
 
 def max_2_sum arr
