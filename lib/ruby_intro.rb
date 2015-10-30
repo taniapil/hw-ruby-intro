@@ -20,8 +20,20 @@ def max_2_sum arr
   sorted[0] + sorted[1]
 end
 
+# Define a method sum_to_n?(array, n) that takes an array of integers and an 
+# additional integer, n, as arguments and returns true if any two elements in 
+# the array of integers sum to n. An empty array should sum to zero by definition.
 def sum_to_n? arr, n
-  # YOUR CODE HERE
+  return false if arr.empty? or arr.length == 1
+  for i in 0...arr.length - 1
+    for j in i + 1...arr.length
+      puts "i: #{i}, j: #{j}, i+j: #{arr[i]+arr[j]}"
+      if arr[i] + arr[j] == n
+        return true
+      end
+    end
+  end
+  return false
 end
 
 # Part 2
