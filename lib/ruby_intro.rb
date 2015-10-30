@@ -61,6 +61,24 @@ end
 
 # Part 3
 
+# Define a class BookInStock which represents a book with an ISBN number, isbn, 
+# and price of the book as a floating-point number, price, as attributes.
 class BookInStock
-# YOUR CODE HERE
+  
+  # The constructor should accept the ISBN number as the first argument and price
+  # as second argument, and should raise ArgumentError if the ISBN number is the
+  # empty string or if the price is less than or equal to zero
+  # Include the proper getters and setters for these attributes.
+  attr_accessor :isbn
+  attr_accessor :price
+  
+  def initialize(isbn, price)
+    raise ArgumentError if isbn.empty? or price <= 0
+    @isbn = isbn
+    @price = price
+  end
+  
+  def price_as_string
+    return sprintf('$%.2f', @price)
+  end
 end
