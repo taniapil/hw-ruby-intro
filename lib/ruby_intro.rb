@@ -37,16 +37,26 @@ end
 
 # Part 2
 
+# Define a method hello(name) that takes a string representing a name and 
+# returns the string "Hello, " concatenated with the name.
 def hello(name)
-  # YOUR CODE HERE
+  return "Hello, #{name}"
 end
 
+# Define a method starts_with_consonant?(s) that takes a string and returns true
+# if it starts with a consonant and false otherwise. 
 def starts_with_consonant? s
-  # YOUR CODE HERE
+  return false if s.empty?
+  return true if s[0] =~ /[^\Waeiou]/i
+  return false
 end
 
+# Define a method binary_multiple_of_4?(s) that takes a string and returns true
+# if the string represents a binary number that is a multiple of 4.
 def binary_multiple_of_4? s
-  # YOUR CODE HERE
+  return false if s.empty? or s =~ /[^01]/
+  return true if s.to_i % 100 == 0
+  return false
 end
 
 # Part 3
