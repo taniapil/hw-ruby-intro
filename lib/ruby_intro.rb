@@ -5,7 +5,9 @@
 # Define a method sum(array) that takes an array of integers as an argument and
 # returns the sum of its elements. For an empty array it should return zero.
 def sum arr
-  return 0 if arr.empty?
+  #return 0 if arr.empty?
+  # arr.inject(:+)
+  arr.inject(0, :+)
 end
 
 def max_2_sum arr
